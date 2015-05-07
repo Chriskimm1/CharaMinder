@@ -14,8 +14,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Twilio
 gem 'twilio-ruby'
-
+# use twitter bootstrap themes 
 gem 'twitter-bootstrap-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -28,8 +29,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
+# use font-
 gem 'font-awesome-rails'
+
+# Use delayed job for running background jobs
+gem 'delayed_job_active_record'
+# Need daemons to start delay_job
+gem 'daemons'
+# Use workless to use less workers on heroku
+gem 'workless'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
