@@ -1,0 +1,34 @@
+<div class="signup container pagination-centered">
+	<div class="row">
+		<div class="col-lg-12">
+			<span class="signuplogo">Sign Up</span>
+			<%= form_for @user do |f| %>
+				<div class="field">	
+				<%= f.label :username %><br>
+				<%= f.text_field :username %><br>
+				</div>
+				<div class="field">
+					<%= f.label :phone_number %><br>
+					<%= f.text_field :phone_number%><br>
+				</div>
+
+				<div class="field">
+				<%= f.label :password %><br>
+				<%= f.password_field :password %><br>
+				</div>
+				<div class="field">
+				<%= f.label :password_confirmation %><br>
+				<%= f.password_field :password_confirmation %><br>
+				<br>
+				</div>
+					
+					
+
+				<%= f.submit "Submit" %>
+
+			<% end %>
+		 </div>
+	</div>
+</div>
+			
+			

@@ -12,4 +12,146 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+
+body {
+    overflow-x: hidden;
+    background-color: #3D9970;
+}
+
+.navbar {
+	background-color: rgb(0,0,0);
+	height: 30%;
+}
+
+.navbar-brand{
+	font-size: 50px;
+	margin-top: 60px;
+	margin-left: 10px!important;
+}
+
+i{
+	font-size: 35px!important;
+}
+
+.circledrop{
+	background-color: darkred;
+	border-radius: 100px;
+	height: 130px;
+	color: lightgray;
+	margin-top: 25px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+}
+
+.circledrop i{
+	/*margin-top: 15px;
+	margin-left: 35px;
+	margin-bottom: 10px;*/
+}
+
+.logout{
+	background-color: purple;
+	border-radius: 100px;
+	height: 130px;
+	color: gray;
+	margin-top: 30px;
+	margin-right: 20px!important;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+}
+
+.logout i{
+	margin-left: 35px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.loggedin{
+	background-color: darkred;
+	border-radius: 100px;
+	height: 130px;
+	width: 130px;
+	color: lightgray;
+	margin-top: 30px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+}
+
+.loggedin i{
+	position: relative;
+	margin-left: 35px;
+	margin-top: 8px;
+	margin-bottom: 5px;
+}
+
+
+
+
+
+header {
+    text-align: center;
+    background-color: #3D9970;
+    background-size: cover;
+}
+
+header img {
+    display: block;
+    margin: 0 auto 10px;
+    height: 400px!important;
+}
+
+header .intro-text .name {
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 5em;
+    font-weight: 900;
+    color: black;
+}
+
+.intro_text{
+	font-size: 20px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 600;
+	color: black;
+}
+
+@media(min-width:768px) {
+    header .container {
+        padding-top: 200px;
+        padding-bottom: 100px;
+    }
+
+.signup{
+	position: relative;
+	top: 150px;
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 2em;
+}
+
+.signuplogo{
+	font-size: 1.2em;
+}
+
+input{
+	border-radius: 50px;
+	margin-left: 2px;
+}
+
+.login{
+	position: relative;
+	top: 150px;
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 2em;
+}
+
+input{
+	text-align: center;
+}
+
