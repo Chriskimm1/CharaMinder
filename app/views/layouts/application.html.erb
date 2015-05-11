@@ -19,7 +19,7 @@
 			<% if current_user %>
 			<ul class="nav navbar-nav pull-right">
 				<li >
-					<a class="loggedin	"><i class="fa fa-user-secret"></i><br>Back you are <br><%= current_user.username %></a>
+					<a class="loggedin	"><i class="fa fa-user-secret"></i><br>Back you are<br><p class="back"><%= current_user.username %></p></a>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav pull-right">
@@ -27,14 +27,19 @@
 					<a class="logout" href="/sessions" data-method="delete" ><i class="fa fa-sign-out"></i><br>Log Out You Will </a>
 				</li>
 			</ul>
+				<ul class="nav navbar-nav pull-right">
+				<li >
+					<a class="appointcircle" href="/appointments"><i class="fa fa-list-ol"></i><br> <p class="back2">Appointments</p> </a>
+				</li>
+			</ul>
 			<% else %>
 			<ul class="nav navbar-nav pull-right">
 				<li>
-					<a class="circledrop" href="/sessions"><i class="fa fa-user"></i><br>Login You Must</a>
+					<a class="loggingin" href="/sessions"><i class="fa fa-sign-in"></i><br>Login You Must</a>
 				</li>
 
 				<li >
-					<a class="circledrop" href="/users/new"><i class="fa fa-user"></i><br>SignUp You Must</a>
+					<a class="signup1" href="/users/new"><i class="fa fa-pencil-square-o"></i><br>SignUp You Must</a>
 				</li>
 			</ul>
 			<% end %>

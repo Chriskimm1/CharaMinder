@@ -37,27 +37,44 @@ i{
 	font-size: 35px!important;
 }
 
-.circledrop{
-	background-color: darkred;
+.loggingin{
+	background-color: cornflowerblue;
 	border-radius: 100px;
 	height: 130px;
-	color: lightgray;
-	margin-top: 25px;
+	color: black;
+	margin-top: 30px;
+	margin-right: 20px;
 	font-family: 'Oswald', sans-serif;
 	font-size: 16px;
 }
 
-.circledrop i{
-	/*margin-top: 15px;
+.loggingin i{
+	margin-top: 15px;
 	margin-left: 35px;
-	margin-bottom: 10px;*/
+	margin-bottom: 10px;
+}
+
+.signup1{
+	background-color: orange;
+	border-radius: 100px;
+	height: 130px;
+	color: black;
+	margin-top: 30px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+}
+
+.signup1 i{
+	margin-top: 15px;
+	margin-left: 35px;
+	margin-bottom: 10px;
 }
 
 .logout{
-	background-color: purple;
+	background-color: orange;
 	border-radius: 100px;
 	height: 130px;
-	color: gray;
+	color: black;
 	margin-top: 30px;
 	margin-right: 20px!important;
 	font-family: 'Oswald', sans-serif;
@@ -71,11 +88,11 @@ i{
 }
 
 .loggedin{
-	background-color: darkred;
+	background-color: cornflowerblue;
 	border-radius: 100px;
 	height: 130px;
 	width: 130px;
-	color: lightgray;
+	color: black;
 	margin-top: 30px;
 	font-family: 'Oswald', sans-serif;
 	font-size: 16px;
@@ -88,7 +105,32 @@ i{
 	margin-bottom: 5px;
 }
 
+.appointcircle{
+	background-color: grey;
+	border-radius: 100px;
+	height: 130px;
+	width: 130px;
+	color: black;
+	margin-top: 30px;
+	margin-right: 20px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+}
 
+.appointcircle i{
+	position: relative;
+	margin-left: 30px;
+	margin-top: 12px;
+	margin-bottom: 8px;
+}
+
+.back{
+	margin-left: 10px;
+}
+
+.back2{
+	margin-left: 4px;
+}
 
 
 
@@ -153,5 +195,45 @@ input{
 
 input{
 	text-align: center;
+}
+
+
+.appointments{
+	position: relative;
+	margin-top: 200px;
+	font-family: 'Oswald', sans-serif;
+}
+
+footer img {
+    display: block;
+    height: 200px!important;
+    margin-left: -100px;
+    float: left;
+}
+
+footer p{
+	float: left;
+	font-size: 23px;
+	margin-left: 60px;
+}
+
+footer {
+  position: relative;
+  height: 250px;
+  clear:both;
+  padding-top:20px;
+ 	background-color: black;
+	color: #428bca;
+} 
+
+.new_reminder{
+	position: relative;
+	top: 300px;
+	font-family: 'Oswald', sans-serif;
+
+}
+
+.h2{
+	margin-left: 222px;
 }
 

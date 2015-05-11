@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  resources :reminders
+  resources :appointments
   resources :users, only: [ :index, :new, :create]
 
   # log in form
