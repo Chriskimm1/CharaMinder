@@ -1,9 +1,11 @@
+require 'net/http'
+
 class Appointment < ActiveRecord::Base
   validates :name, presence: true
   validates :phone_number, presence: true
   validates :time, presence: true
 
-  after_create :reminder
+  before_save :yoda_speak
 
   @@REMINDER_TIME = 30.minutes # minutes before appointment
 
@@ -26,7 +28,11 @@ class Appointment < ActiveRecord::Base
   end
 
   def yoda_speak
-    
+    response = URI.escape("https://yoda.p.mashape.com/yoda?sentence=#{self.tell_yoda}") ,
+  headers:{
+    "X-Mashape-Key" => "8khpGVGeKFmshim81WAJlEshvCRIp1nXpdLjsn8J1tj7vubgo6",
+    "Accept" => "text/plain"
+  }
   end
 
   handle_asynchronously :reminder, :run_at => Proc.new { |i| i.when_to_run }

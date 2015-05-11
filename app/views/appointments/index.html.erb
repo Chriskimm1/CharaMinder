@@ -7,9 +7,9 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:phone_number) %></th>
+      <th><%= model_class.human_attribute_name(:tell_yoda) %></th>
       <th><%= model_class.human_attribute_name(:time) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -18,9 +18,9 @@
   <tbody>
     <% @appointments.each do |appointment| %>
       <tr>
-        <td><%= link_to appointment.id, appointment_path(appointment) %></td>
         <td><%= appointment.name %></td>
         <td><%= appointment.phone_number %></td>
+        <td><%= appointment.tell_yoda %></td>
         <td><%= appointment.time %></td>
         <td><%=l appointment.created_at %></td>
         <td>

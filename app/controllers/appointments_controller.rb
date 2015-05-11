@@ -29,11 +29,16 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
     Time.zone = appointment_params[:time_zone]
+    user = current_user
+    appointment_params[:phone_number] = user.phone_number
+    appointment_params[:name] = user.username 
+
+    p '*' * 100
+    p appointment_params
     @appointment = Appointment.new(appointment_params)
-    
     respond_to do |format|
       if @appointment.save
-        format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
+        format.html { redirect_to "/appointments", notice: 'Appointment was successfully created.' }
         format.json { render :show, status: :created, location: @appointment }
       else
         format.html { render :new }
@@ -47,7 +52,7 @@ class AppointmentsController < ApplicationController
   def update
     respond_to do |format|
       if @appointment.update(appointment_params)
-        format.html { redirect_to @appointment, notice: 'Appointment was successfully updated.' }
+        format.html { redirect_to "/appointments", notice: 'Appointment was successfully updated.' }
         format.json { render :show, status: :ok, location: @appointment }
       else
         format.html { render :edit }
@@ -75,6 +80,6 @@ class AppointmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def appointment_params
-      params.require(:appointment).permit(:name, :phone_number, :time, :time_zone)
+      params.require(:appointment).permit(:name, :phone_number, :tell_yoda, :time, :time_zone)
     end
 end

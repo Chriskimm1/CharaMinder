@@ -14,21 +14,26 @@
       </div>
     </div>
   <% end %>
+<div class="new_reminder">
+  
+  <div class="form-group">
+    <div class="col-lg-10">
+      <%= f.hidden_field :name, :value => "#{current_user.username}" %>
+    </div>
+    </div>
+  <div class="form-group">
+      <div class="col-lg-10">
+      <%= f.hidden_field :phone_number, :value => "#{current_user.phone_number}" %>
+    </div>
+    
+  </div>
 
-  <div class="form-group">
-    <%= f.label :name, :class => 'control-label col-lg-2' %>
+   <div class="form-group">
+    <%= f.label :tell_yoda, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :name, :class => 'form-control' %>
+      <%= f.text_field :tell_yoda, :class => 'form-control' %>
     </div>
-    <%=f.error_span(:name) %>
-  </div>
-  <div class="form-group">
-    <%= f.label :phone_number, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :phone_number, :class => 'form-control' %>
     </div>
-    <%=f.error_span(:phone_number) %>
-  </div>
   <div class="form-group">
     <%= f.label :time, "Time and Date", :class => 'control-label col-lg-2' %>
     <!-- Rails expects time_select when dealing with ActiveRecord forms -->
@@ -38,10 +43,7 @@
     <div class="col-lg-4">
       <%= date_select :appointment, :time, {:class => "form-control" } %>
     </div>
-    <div class="col-lg-2">
-      <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.all.sort, default: "Pacific Time (US & Canada)" %>
-    </div>
-    <%=f.error_span(:time) %>
+
   </div>
 
   <div class="form-group">
@@ -53,3 +55,4 @@
   </div>
 
 <% end %>
+</div>
