@@ -43,7 +43,7 @@
     <div class="col-lg-4">
       <%= date_select :appointment, :time, {:class => "form-control" } %>
     </div>
-
+    <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.all.sort, default: "Eastern Time (US & Canada)" %>
   </div>
 
   <div class="form-group">

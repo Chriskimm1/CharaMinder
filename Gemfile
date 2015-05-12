@@ -19,6 +19,7 @@ gem 'twilio-ruby'
 # use twitter bootstrap themes 
 gem 'twitter-bootstrap-rails'
 # Use jquery as the JavaScript library
+gem 'whenever'
 gem 'unirest'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -39,7 +40,7 @@ gem 'delayed_job_active_record'
 gem 'daemons'
 # Use workless to use less workers on heroku
 gem 'workless'
-
+gem 'pry'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

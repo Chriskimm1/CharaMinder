@@ -1,4 +1,6 @@
+
 <div class="appointments">
+<% if current_user %>
   
 <%- model_class = Appointment -%>
 <div class="page-header">
@@ -40,4 +42,7 @@
 <%= link_to "New",
             new_appointment_path,
             :class => 'btn btn-primary' %>
+            <% else %>
+            <h1>LOG IN YOU MUST TO SEE THE FORCE</h1>
+<% end %>
 </div>
