@@ -20,6 +20,7 @@
 body {
     overflow-x: hidden;
     background-color: #3D9970;
+    height: 200%!important;
 }
 
 .navbar {
@@ -140,10 +141,12 @@ header {
     background-size: cover;
 }
 
+
+
 header img {
     display: block;
     margin: 0 auto 10px;
-    height: 400px!important;
+    height: 90%!important;
 }
 
 header .intro-text .name {
@@ -162,10 +165,16 @@ header .intro-text .name {
 	color: black;
 }
 
-@media(min-width:768px) {
+@media(min-width:300px) {
     header .container {
         padding-top: 200px;
         padding-bottom: 100px;
+    }
+
+@media(min-width:300px) {
+    footer .container {
+        padding-top: -10px;
+        padding-bottom: -10px;
     }
 
 .signup{
@@ -200,37 +209,50 @@ input{
 
 .appointments{
 	position: relative;
-	margin-top: 200px;
+	margin-top: 100px;
+	padding-top: 100px;
+	padding-bottom: 150px;
 	font-family: 'Oswald', sans-serif;
+	background-color: slateblue;
+	background-size: cover;
+
 }
 
 footer img {
     display: block;
     height: 200px!important;
-    margin-left: -100px;
     float: left;
+    opacity: 0.7;
 }
 
 footer p{
 	float: left;
+	text-align: center;
 	font-size: 23px;
-	margin-left: 60px;
+	margin-left: 100px;
+	margin-top: 50px;
 }
 
+
 footer {
-  position: relative;
-  height: 250px;
-  clear:both;
-  padding-top:20px;
- 	background-color: black;
-	color: #428bca;
-} 
+    text-align: center;
+    font-weight: 100;
+    background-color: black;
+    background-size: cover;
+		color: whitesmoke;
+}
+
 
 .new_reminder{
 	position: relative;
-	top: 300px;
+	top: 120px;
+	padding-bottom: 50px;
+	font-size: 30px;
 	font-family: 'Oswald', sans-serif;
-
+	color: black;
+	background-color: cornflowerblue;
+	background-size: cover ;
+	z-index: 5;
 }
 
 .h2{

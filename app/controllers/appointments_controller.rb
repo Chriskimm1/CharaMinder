@@ -4,7 +4,9 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
-    @appointments = Appointment.all
+    @appointments = Appointment.where({
+      user_id: current_user.id
+      })
     if @appointments.length == 0
       flash[:alert] = "You have no appointments. Create one now to get started."
     end
@@ -32,6 +34,7 @@ class AppointmentsController < ApplicationController
     user = current_user
     appointment_params[:phone_number] = user.phone_number
     appointment_params[:name] = user.username 
+    appointment_params[:user_id] = current_user.id
 
     p '*' * 100
     p appointment_params
@@ -80,6 +83,6 @@ class AppointmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def appointment_params
-      params.require(:appointment).permit(:name, :phone_number, :tell_yoda, :time, :time_zone)
+      params.require(:appointment).permit(:name, :phone_number, :tell_yoda, :user_id, :time, :time_zone)
     end
 end

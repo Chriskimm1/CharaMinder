@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20150511174047) do
     t.string   "phone_number"
     t.text     "tell_yoda"
     t.datetime "time"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "time_zone"

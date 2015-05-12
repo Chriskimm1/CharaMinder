@@ -5,6 +5,7 @@ class CreateAppointments < ActiveRecord::Migration
     	t.string :phone_number
     	t.text   :tell_yoda
     	t.datetime :time
+    	t.integer :user_id
 
     	t.timestamps
     end
